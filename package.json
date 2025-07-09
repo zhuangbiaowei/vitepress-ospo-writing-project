@@ -14,7 +14,9 @@
     "build:clean": "npm run clean && npm run build",
     "lint:markdown": "markdownlint 'docs/**/*.md' --ignore 'docs/.vitepress'",
     "check-links": "vitepress-links-check docs",
-    "new:article": "node scripts/new-article.js"
+    "new:article": "node scripts/new-article.js",
+    "predeploy": "npm run build:clean",
+    "deploy": "gh-pages -d docs/.vitepress/dist"
   },
   "keywords": [
     "vitepress",
@@ -27,6 +29,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "markdownlint": "^0.38.0",
     "markdownlint-cli": "^0.45.0",
     "rimraf": "^6.0.1",

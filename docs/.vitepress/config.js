@@ -8,6 +8,10 @@ export default defineConfig({
   // Clean URLs
   cleanUrls: true,
   
+  // Base URL for GitHub Pages deployment
+  // 注意：如果您的仓库名不是根域名，请设置为 /your-repo-name/
+  base: '/markdown-writing-project/',
+  
   // Language and internationalization
   lang: 'zh-CN',
   

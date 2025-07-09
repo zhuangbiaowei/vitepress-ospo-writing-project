@@ -1,64 +1,50 @@
-# Markdown Writing Project
+# Professional Writing Hub
 
-A professional markdown writing project based on VitePress for creating high-quality technical documentation and articles.
+[![Deploy VitePress](https://github.com/yourusername/markdown-writing-project/actions/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/markdown-writing-project/actions/workflows/deploy.yml)
 
-## 🚀 Features
+一个基于 VitePress 构建的专业 Markdown 写作平台，用于创建高质量的技术文档和文章。
 
-- **VitePress**: Modern static site generator optimized for technical writing
-- **Markdown-First**: Pure markdown writing experience with rich formatting support
-- **Professional Theme**: Clean, readable design for technical content
-- **Search Support**: Built-in search functionality
-- **Responsive Design**: Mobile-friendly responsive layout
+## ✨ 特性
 
-## 📚 Content
+- **纯 Markdown 写作体验**：专注内容创作，支持数学公式、代码高亮等高级功能
+- **现代化技术栈**：基于 VitePress 和 Vue 3 构建
+- **专业设计**：清晰易读的排版设计，响应式布局，支持暗色/亮色主题切换
+- **强大搜索**：内置全文搜索功能
+- **结构化内容**：自动生成导航和目录
 
-- **OSPO Guide**: Comprehensive guide on establishing Open Source Program Office in enterprises
-- **Technical Articles**: Professional technical writing and documentation
+## 📚 内容
 
-## 🛠️ Development
+- **OSPO 指南**：《如何在企业内部建立 OSPO（开源项目办公室）》全面指南
+- **写作指南**：Markdown 语法和最佳实践
+- **技术文章**：专业技术内容
 
-### Prerequisites
+## 🚀 快速开始
 
-- Node.js (v18 or higher)
-- npm or yarn
+### 环境准备
 
-### Getting Started
+- Node.js (v18 或更高版本)
+- npm 或 yarn
 
-1. Install dependencies:
+### 开发
+
 ```bash
+# 安装依赖
 npm install
-```
 
-2. Start development server:
-```bash
+# 启动开发服务器
 npm run dev
-```
 
-3. Build for production:
-```bash
+# 构建生产版本
 npm run build
-```
 
-4. Preview production build:
-```bash
+# 预览生产版本
 npm run preview
 ```
 
-## 📝 Writing
+## 📝 贡献
 
-All content is written in Markdown format and stored in the `docs/` directory. The project uses VitePress for static site generation with automatic navigation and search indexing.
+欢迎贡献新文章和改进！请查看 [贡献指南](CONTRIBUTING.md) 了解更多信息。
 
-## 🔧 Project Structure
+## 📄 许可证
 
-```
-├── docs/                 # Documentation source files
-│   ├── .vitepress/      # VitePress configuration
-│   ├── articles/        # Article collection
-│   └── index.md         # Homepage
-├── package.json         # Project dependencies and scripts
-└── README.md           # Project documentation
-```
-
-## 📄 License
-
-MIT License
+MIT 许可证
