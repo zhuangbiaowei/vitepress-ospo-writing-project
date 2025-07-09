@@ -1,0 +1,38 @@
+{
+  "name": "markdown-writing-project",
+  "version": "1.0.0",
+  "description": "A professional markdown writing project based on VitePress for technical documentation and articles",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "dev:host": "vitepress dev docs --host",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "preview:host": "vitepress preview docs --host",
+    "serve": "vitepress serve docs",
+    "clean": "rimraf docs/.vitepress/dist docs/.vitepress/cache",
+    "build:clean": "npm run clean && npm run build",
+    "lint:markdown": "markdownlint 'docs/**/*.md' --ignore 'docs/.vitepress'",
+    "check-links": "vitepress-links-check docs",
+    "new:article": "node scripts/new-article.js"
+  },
+  "keywords": [
+    "vitepress",
+    "markdown",
+    "documentation",
+    "writing",
+    "ospo",
+    "open-source"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "markdownlint": "^0.38.0",
+    "markdownlint-cli": "^0.45.0",
+    "rimraf": "^6.0.1",
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "markdown-it-mathjax3": "^4.3.2"
+  }
+}

@@ -1,0 +1,23 @@
+
+> markdown-writing-project@1.0.0 dev
+> vitepress dev docs
+
+
+  vitepress v1.6.3
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+
+> markdown-writing-project@1.0.0 dev
+> vitepress dev docs --host
+
+
+  vitepress v1.6.3
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://172.17.0.3:5173/
+
+> markdown-writing-project@1.0.0 preview
+> vitepress preview docs --host
+
+Built site served at http://localhost:4173/
