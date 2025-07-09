@@ -16,7 +16,8 @@
     "check-links": "vitepress-links-check docs",
     "new:article": "node scripts/new-article.js",
     "predeploy": "npm run build:clean",
-    "deploy": "gh-pages -d docs/.vitepress/dist"
+    "deploy": "gh-pages -d dist",
+    "test:deploy": "node scripts/test-deploy.js"
   },
   "keywords": [
     "vitepress",
