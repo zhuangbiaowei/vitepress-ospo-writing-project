@@ -10,7 +10,7 @@ export default defineConfig({
   
   // Base URL for GitHub Pages deployment
   // 注意：如果您的仓库名不是根域名，请设置为 /your-repo-name/
-  base: '/markdown-writing-project/',
+  base: '/vitepress-ospo-writing-project/',
   
   // Language and internationalization
   lang: 'zh-CN',
@@ -20,7 +20,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#3c3c3c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/vitepress-ospo-writing-project/logo.svg' }],
     ['meta', { name: 'author', content: 'Professional Writing Hub' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Professional Writing Hub' }],

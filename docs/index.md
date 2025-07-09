@@ -55,15 +55,15 @@ features:
 
 <div class="tip custom-block">
   <p class="custom-block-title">🌟 推荐文章</p>
-  <p><a href="/articles/ospo-guide">如何在企业内部建立OSPO（开源项目办公室）</a></p>
+  <p><a href="./articles/ospo-guide">如何在企业内部建立OSPO（开源项目办公室）</a></p>
   <p>深入探讨企业如何建立和运营开源项目办公室，包括组织架构、流程设计和最佳实践指南。</p>
 </div>
 
 ## 🚀 开始探索
 
-- **📚 [浏览文章](/articles/)** - 探索我们精心创作的技术文章集合
-- **✍️ [写作指南](/guides/)** - 学习如何使用本平台进行专业写作
-- **ℹ️ [关于平台](/about)** - 了解平台的愿景、特性和技术架构
+- **📚 [浏览文章](./articles/)** - 探索我们精心创作的技术文章集合
+- **✍️ [写作指南](./guides/)** - 学习如何使用本平台进行专业写作
+- **ℹ️ [关于平台](./about)** - 了解平台的愿景、特性和技术架构
 
 ## 💡 写作理念
 
@@ -78,6 +78,6 @@ features:
 ---
 
 <div style="text-align: center; margin-top: 2rem; opacity: 0.8;">
-  <p>📧 有任何建议或想法？欢迎<a href="/about#联系我们">联系我们</a></p>
+  <p>📧 有任何建议或想法？欢迎<a href="./about#联系我们">联系我们</a></p>
   <p><em>让我们一起创作出色的技术内容！</em></p>
 </div>
