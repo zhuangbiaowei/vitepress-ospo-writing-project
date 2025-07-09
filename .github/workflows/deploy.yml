@@ -33,15 +33,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: npm
+          # 启用缓存（如果锁文件不存在会自动跳过）
+          cache: 'npm'
 
       # 设置 Pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # 安装依赖项
+      # 安装依赖项 - 优先使用 npm ci，如果失败则回退到 npm install
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            echo "Found package-lock.json, using npm ci"
+            npm ci
+          else
+            echo "No package-lock.json found, using npm install"
+            npm install
+          fi
 
       # 构建站点
       - name: Build VitePress site
