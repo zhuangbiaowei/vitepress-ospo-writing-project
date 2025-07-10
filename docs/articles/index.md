@@ -12,6 +12,11 @@
 - [如何从开源社区招募人才？](/articles/recruiting-open-source-talent)  
   *全面探讨从开源社区识别、吸引和招募优秀技术人才的策略、方法和最佳实践。*
 
+### 技术实践
+
+- [异步Ruby是AI应用的未来（它已经到来）](/articles/async-ruby-ai-apps-future)  
+  *深入探讨异步Ruby在AI应用中的优势，详细分析纤程与线程的差异，以及如何构建高性能的LLM应用。*
+
 ### 可视化与图表
 
 - [Mermaid 图表指南](/articles/mermaid-diagram-guide)  
