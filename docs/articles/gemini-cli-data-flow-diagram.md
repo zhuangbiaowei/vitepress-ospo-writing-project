@@ -4,80 +4,72 @@
 
 ```mermaid
 flowchart TD
-    subgraph "输入层 (Input Layer)"
-        UserInput[👤 用户输入]
-        SlashCmd[🔧 斜杠命令]
-        FileUpload[📁 文件上传]
+    subgraph "Input_Layer [输入层]"
+        UserInput[User Input 用户输入]
+        SlashCmd[Slash Commands 斜杠命令]
+        FileUpload[File Upload 文件上传]
     end
 
-    subgraph "预处理层 (Preprocessing Layer)"
-        InputParser[📝 输入解析器]
-        CmdProcessor[⚡ 命令处理器]
-        ContextBuilder[🧩 上下文构建器]
+    subgraph "Preprocessing_Layer [预处理层]"
+        InputParser[Input Parser 输入解析器]
+        CmdProcessor[Command Processor 命令处理器]
+        ContextBuilder[Context Builder 上下文构建器]
     end
 
-    subgraph "核心处理层 (Core Processing Layer)"
-        subgraph "会话管理 (Session Management)"
-            History[📚 对话历史]
-            Memory[🧠 记忆系统]
-            Context[🔄 上下文管理]
+    subgraph "Core_Processing_Layer [核心处理层]"
+        subgraph "Session_Management [会话管理]"
+            History[History 对话历史]
+            Memory[Memory System 记忆系统]
+            Context[Context Management 上下文管理]
         end
         
-        subgraph "AI处理 (AI Processing)"
-            PromptEngine[🤖 提示词引擎]
-            GeminiAPI[🌐 Gemini API]
-            ResponseParser[📋 响应解析器]
+        subgraph "AI_Processing [AI处理]"
+            PromptEngine[Prompt Engine 提示词引擎]
+            GeminiAPI[Gemini API]
+            ResponseParser[Response Parser 响应解析器]
         end
         
-        subgraph "工具系统 (Tool System)"
-            ToolRegistry[🔧 工具注册表]
-            ToolExecutor[⚙️ 工具执行器]
-            ToolResult[📊 工具结果]
+        subgraph "Tool_System [工具系统]"
+            ToolRegistry[Tool Registry 工具注册表]
+            ToolExecutor[Tool Executor 工具执行器]
+            ToolResult[Tool Result 工具结果]
         end
     end
 
-    subgraph "外部集成层 (External Integration Layer)"
-        subgraph "文件系统 (File System)"
-            FileRead[📖 文件读取]
-            FileWrite[✏️ 文件写入]
-            FileEdit[📝 文件编辑]
-        end
+    subgraph "External_Integration_Layer [外部集成层]"
+        FileRead[File Read 文件读取]
+        FileWrite[File Write 文件写入]
+        FileEdit[File Edit 文件编辑]
         
-        subgraph "网络服务 (Network Services)"
-            WebSearch[🔍 网络搜索]
-            WebFetch[🌐 网页抓取]
-            APICall[📡 API调用]
-        end
+        WebSearch[Web Search 网络搜索]
+        WebFetch[Web Fetch 网页抓取]
+        APICall[API Call API调用]
         
-        subgraph "系统交互 (System Interaction)"
-            ShellExec[💻 Shell执行]
-            GitOps[📦 Git操作]
-            ProcessMgmt[🔄 进程管理]
-        end
+        ShellExec[Shell Execute Shell执行]
+        GitOps[Git Operations Git操作]
+        ProcessMgmt[Process Management 进程管理]
         
-        subgraph "MCP服务 (MCP Services)"
-            MCPClient[🔌 MCP客户端]
-            ImageGen[🎨 图像生成]
-            VideoGen[🎬 视频生成]
-            AudioGen[🎵 音频生成]
-        end
+        MCPClient[MCP Client MCP客户端]
+        ImageGen[Image Generation 图像生成]
+        VideoGen[Video Generation 视频生成]
+        AudioGen[Audio Generation 音频生成]
     end
 
-    subgraph "输出层 (Output Layer)"
-        ResponseFormatter[🎨 响应格式化]
-        StreamRenderer[🌊 流式渲染]
-        UIDisplay[🖥️ UI显示]
-        FileOutput[💾 文件输出]
+    subgraph "Output_Layer [输出层]"
+        ResponseFormatter[Response Formatter 响应格式化]
+        StreamRenderer[Stream Renderer 流式渲染]
+        UIDisplay[UI Display UI显示]
+        FileOutput[File Output 文件输出]
     end
 
-    subgraph "存储层 (Storage Layer)"
-        ConfigFiles[⚙️ 配置文件]
-        CacheData[🗄️ 缓存数据]
-        UserSettings[👤 用户设置]
-        SessionData[📊 会话数据]
+    subgraph "Storage_Layer [存储层]"
+        ConfigFiles[Config Files 配置文件]
+        CacheData[Cache Data 缓存数据]
+        UserSettings[User Settings 用户设置]
+        SessionData[Session Data 会话数据]
     end
 
-    %% 数据流连接
+    %% Data Flow Connections
     UserInput --> InputParser
     SlashCmd --> CmdProcessor
     FileUpload --> InputParser
@@ -113,18 +105,18 @@ flowchart TD
     ResponseFormatter --> StreamRenderer
     StreamRenderer --> UIDisplay
     
-    %% 存储连接
+    %% Storage Connections
     Context -.-> SessionData
     Memory -.-> CacheData
     UserInput -.-> UserSettings
     History -.-> SessionData
     
-    %% 样式定义
-    classDef inputLayer fill:#e1f5fe
-    classDef processingLayer fill:#e8f5e8
-    classDef integrationLayer fill:#fff3e0
-    classDef outputLayer fill:#f3e5f5
-    classDef storageLayer fill:#fce4ec
+    %% Styling
+    classDef inputLayer fill:#e1f5fe,stroke:#01579b
+    classDef processingLayer fill:#e8f5e8,stroke:#1b5e20
+    classDef integrationLayer fill:#fff3e0,stroke:#e65100
+    classDef outputLayer fill:#f3e5f5,stroke:#4a148c
+    classDef storageLayer fill:#fce4ec,stroke:#880e4f
     
     class UserInput,SlashCmd,FileUpload inputLayer
     class InputParser,ContextBuilder,PromptEngine,ToolRegistry processingLayer
@@ -137,30 +129,30 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    subgraph "输入处理 (Input Processing)"
-        UserQuery[用户查询]
-        SystemPrompt[系统提示词]
-        ContextInfo[上下文信息]
+    subgraph "Input_Processing [输入处理]"
+        UserQuery[User Query 用户查询]
+        SystemPrompt[System Prompt 系统提示词]
+        ContextInfo[Context Info 上下文信息]
     end
     
-    subgraph "提示词构建 (Prompt Construction)"
-        PromptBuilder[提示词构建器]
-        ToolDefs[工具定义]
-        HistoryContext[历史上下文]
-        MemoryContext[记忆上下文]
+    subgraph "Prompt_Construction [提示词构建]"
+        PromptBuilder[Prompt Builder 提示词构建器]
+        ToolDefs[Tool Definitions 工具定义]
+        HistoryContext[History Context 历史上下文]
+        MemoryContext[Memory Context 记忆上下文]
     end
     
-    subgraph "AI处理 (AI Processing)"
-        TokenCount[令牌计算]
-        APIRequest[API请求]
-        Response[AI响应]
+    subgraph "AI_Processing [AI处理]"
+        TokenCount[Token Count 令牌计算]
+        APIRequest[API Request API请求]
+        Response[AI Response AI响应]
     end
     
-    subgraph "响应解析 (Response Parsing)"
-        ContentParser[内容解析器]
-        ToolCallExtractor[工具调用提取器]
-        TextContent[文本内容]
-        ToolCalls[工具调用]
+    subgraph "Response_Parsing [响应解析]"
+        ContentParser[Content Parser 内容解析器]
+        ToolCallExtractor[Tool Call Extractor 工具调用提取器]
+        TextContent[Text Content 文本内容]
+        ToolCalls[Tool Calls 工具调用]
     end
 
     UserQuery --> PromptBuilder
@@ -184,33 +176,33 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    subgraph "工具调用处理 (Tool Call Processing)"
-        ToolCall[🔧 工具调用]
-        Validation[✅ 参数验证]
-        Permission[🔐 权限检查]
-        Confirmation[❓ 用户确认]
+    subgraph "Tool_Call_Processing [工具调用处理]"
+        ToolCall[Tool Call 工具调用]
+        Validation[Parameter Validation 参数验证]
+        Permission[Permission Check 权限检查]
+        Confirmation[User Confirmation 用户确认]
     end
     
-    subgraph "工具执行 (Tool Execution)"
-        ReadTool[📖 读取工具]
-        WriteTool[✏️ 写入工具]
-        ShellTool[💻 Shell工具]
-        SearchTool[🔍 搜索工具]
-        MCPTool[🔌 MCP工具]
+    subgraph "Tool_Execution [工具执行]"
+        ReadTool[Read Tool 读取工具]
+        WriteTool[Write Tool 写入工具]
+        ShellTool[Shell Tool Shell工具]
+        SearchTool[Search Tool 搜索工具]
+        MCPTool[MCP Tool MCP工具]
     end
     
-    subgraph "数据源 (Data Sources)"
-        LocalFiles[📁 本地文件]
-        RemoteAPIs[🌐 远程API]
-        SystemCmds[⚙️ 系统命令]
-        MCPServers[🖥️ MCP服务器]
+    subgraph "Data_Sources [数据源]"
+        LocalFiles[Local Files 本地文件]
+        RemoteAPIs[Remote APIs 远程API]
+        SystemCmds[System Commands 系统命令]
+        MCPServers[MCP Servers MCP服务器]
     end
     
-    subgraph "结果处理 (Result Processing)"
-        DataTransform[🔄 数据转换]
-        ErrorHandling[⚠️ 错误处理]
-        ResultFormat[📋 结果格式化]
-        CacheUpdate[🗄️ 缓存更新]
+    subgraph "Result_Processing [结果处理]"
+        DataTransform[Data Transform 数据转换]
+        ErrorHandling[Error Handling 错误处理]
+        ResultFormat[Result Format 结果格式化]
+        CacheUpdate[Cache Update 缓存更新]
     end
 
     ToolCall --> Validation
@@ -243,31 +235,31 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    subgraph "文件发现 (File Discovery)"
-        ScanDir[📂 目录扫描]
-        GitIgnore[🚫 .gitignore过滤]
-        FilePattern[🔍 文件模式匹配]
-        FileList[📋 文件列表]
+    subgraph "File_Discovery [文件发现]"
+        ScanDir[Directory Scan 目录扫描]
+        GitIgnore[GitIgnore Filter gitignore过滤]
+        FilePattern[File Pattern Match 文件模式匹配]
+        FileList[File List 文件列表]
     end
     
-    subgraph "文件操作 (File Operations)"
-        ReadOp[📖 读取操作]
-        WriteOp[✏️ 写入操作]
-        EditOp[📝 编辑操作]
-        SearchOp[🔍 搜索操作]
+    subgraph "File_Operations [文件操作]"
+        ReadOp[Read Operation 读取操作]
+        WriteOp[Write Operation 写入操作]
+        EditOp[Edit Operation 编辑操作]
+        SearchOp[Search Operation 搜索操作]
     end
     
-    subgraph "内容处理 (Content Processing)"
-        ContentParse[📄 内容解析]
-        SyntaxHL[🎨 语法高亮]
-        DiffGen[🔄 差异生成]
-        ContentCache[🗄️ 内容缓存]
+    subgraph "Content_Processing [内容处理]"
+        ContentParse[Content Parse 内容解析]
+        SyntaxHL[Syntax Highlight 语法高亮]
+        DiffGen[Diff Generation 差异生成]
+        ContentCache[Content Cache 内容缓存]
     end
     
-    subgraph "输出格式 (Output Format)"
-        MarkdownOut[📝 Markdown输出]
-        JSONOut[📋 JSON输出]
-        PlainText[📄 纯文本输出]
+    subgraph "Output_Format [输出格式]"
+        MarkdownOut[Markdown Output Markdown输出]
+        JSONOut[JSON Output JSON输出]
+        PlainText[Plain Text Output 纯文本输出]
     end
 
     ScanDir --> GitIgnore
@@ -293,134 +285,79 @@ flowchart LR
     ContentCache --> PlainText
 ```
 
-## 5. 认证数据流 (Authentication Data Flow)
+## 5. MCP集成数据流 (MCP Integration Data Flow)
 
 ```mermaid
-flowchart TD
-    subgraph "认证输入 (Auth Input)"
-        AuthType[认证类型选择]
-        APIKey[API密钥]
-        OAuthCode[OAuth授权码]
-        ServiceAccount[服务账户凭据]
+flowchart TB
+    subgraph "MCP_Client_Layer [MCP客户端层]"
+        MCPClient[MCP Client MCP客户端]
+        ServerDiscovery[Server Discovery 服务器发现]
+        ConnectionMgr[Connection Manager 连接管理]
     end
     
-    subgraph "认证处理 (Auth Processing)"
-        TypeValidator[类型验证器]
-        KeyValidator[密钥验证器]
-        TokenExchange[令牌交换]
-        CredentialManager[凭据管理器]
+    subgraph "MCP_Servers [MCP服务器]"
+        ImagenServer[Imagen Server 图像服务器]
+        VeoServer[Veo Server 视频服务器]
+        CustomServer[Custom Server 自定义服务器]
     end
     
-    subgraph "令牌管理 (Token Management)"
-        AccessToken[访问令牌]
-        RefreshToken[刷新令牌]
-        TokenCache[令牌缓存]
-        TokenRefresh[令牌刷新]
+    subgraph "Tool_Adaptation [工具适配]"
+        ToolWrapper[Tool Wrapper 工具包装器]
+        ParamTransform[Parameter Transform 参数转换]
+        ResultTransform[Result Transform 结果转换]
     end
     
-    subgraph "API客户端 (API Client)"
-        AuthenticatedClient[已认证客户端]
-        RequestHeaders[请求头设置]
-        APIEndpoint[API端点]
+    subgraph "Media_Processing [媒体处理]"
+        ImageProcess[Image Processing 图像处理]
+        VideoProcess[Video Processing 视频处理]
+        AudioProcess[Audio Processing 音频处理]
     end
 
-    AuthType --> TypeValidator
-    APIKey --> KeyValidator
-    OAuthCode --> TokenExchange
-    ServiceAccount --> CredentialManager
+    MCPClient --> ServerDiscovery
+    ServerDiscovery --> ConnectionMgr
+    ConnectionMgr --> ImagenServer
+    ConnectionMgr --> VeoServer
+    ConnectionMgr --> CustomServer
     
-    TypeValidator --> AccessToken
-    KeyValidator --> AccessToken
-    TokenExchange --> AccessToken
-    CredentialManager --> AccessToken
+    ImagenServer --> ToolWrapper
+    VeoServer --> ToolWrapper
+    CustomServer --> ToolWrapper
     
-    AccessToken --> TokenCache
-    AccessToken --> RefreshToken
-    TokenCache --> TokenRefresh
-    RefreshToken --> TokenRefresh
+    ToolWrapper --> ParamTransform
+    ParamTransform --> ImageProcess
+    ParamTransform --> VideoProcess
+    ParamTransform --> AudioProcess
     
-    TokenRefresh --> AuthenticatedClient
-    AuthenticatedClient --> RequestHeaders
-    RequestHeaders --> APIEndpoint
-```
-
-## 6. 缓存与存储数据流 (Cache and Storage Data Flow)
-
-```mermaid
-flowchart LR
-    subgraph "数据源 (Data Sources)"
-        APIResponses[API响应]
-        FileContent[文件内容]
-        UserPrefs[用户偏好]
-        SessionState[会话状态]
-    end
-    
-    subgraph "缓存层 (Cache Layer)"
-        MemoryCache[内存缓存]
-        DiskCache[磁盘缓存]
-        CachePolicy[缓存策略]
-        CacheExpiry[缓存过期]
-    end
-    
-    subgraph "持久化存储 (Persistent Storage)"
-        ConfigFiles[配置文件]
-        SettingsDB[设置数据库]
-        HistoryLog[历史日志]
-        TempFiles[临时文件]
-    end
-    
-    subgraph "数据检索 (Data Retrieval)"
-        CacheHit[缓存命中]
-        CacheMiss[缓存未命中]
-        DataFetch[数据获取]
-        DataMerge[数据合并]
-    end
-
-    APIResponses --> MemoryCache
-    FileContent --> DiskCache
-    UserPrefs --> ConfigFiles
-    SessionState --> HistoryLog
-    
-    MemoryCache --> CachePolicy
-    DiskCache --> CachePolicy
-    CachePolicy --> CacheExpiry
-    
-    CacheExpiry --> CacheHit
-    CacheExpiry --> CacheMiss
-    CacheMiss --> DataFetch
-    DataFetch --> DataMerge
-    
-    ConfigFiles --> DataMerge
-    SettingsDB --> DataMerge
-    HistoryLog --> DataMerge
+    ImageProcess --> ResultTransform
+    VideoProcess --> ResultTransform
+    AudioProcess --> ResultTransform
 ```
 
 ## 数据流特点说明
 
-### 1. 分层数据处理
-- **输入层**：统一处理各种用户输入
-- **预处理层**：解析和验证输入数据
-- **核心处理层**：AI推理和工具调度
-- **集成层**：外部系统和服务交互
-- **输出层**：格式化和渲染结果
+### 1. 异步处理
+- 支持流式响应和实时更新
+- 工具执行采用异步模式
+- 支持长时间运行的任务
 
-### 2. 数据转换管道
-- **结构化数据**：JSON、配置文件等结构化数据
-- **文本数据**：自然语言、代码、文档等文本内容
-- **二进制数据**：图像、音频、视频等媒体文件
-- **流式数据**：实时响应和更新数据
+### 2. 错误处理
+- 多层次错误处理机制
+- 优雅降级和回退策略
+- 详细的错误日志和追踪
 
 ### 3. 缓存策略
-- **多层缓存**：内存缓存 + 磁盘缓存
-- **智能过期**：基于时间和访问模式的缓存策略
-- **数据一致性**：确保缓存与源数据的一致性
+- 智能缓存文件内容
+- 会话数据持久化
+- 工具执行结果缓存
 
-### 4. 错误处理
-- **数据验证**：输入数据的格式和有效性检查
-- **异常恢复**：网络错误、API限制等异常情况处理
-- **降级策略**：服务不可用时的备选方案
+### 4. 安全控制
+- 工具执行权限检查
+- 用户确认机制
+- 沙箱环境隔离
 
-### 5. 性能优化
-- **并行处理**：独立数据流的并行处理
-- **批量操作**：合并相似操作减少开销
-- **流式处理**：大数据量的流式处理机制
+### 5. 扩展性
+- 模块化的工具系统
+- 可插拔的MCP服务
+- 灵活的配置管理
+
+这个数据流架构确保了 Gemini CLI 能够高效、安全地处理各种复杂的用户请求，同时提供良好的扩展性和维护性。

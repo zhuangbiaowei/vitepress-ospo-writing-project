@@ -2,134 +2,107 @@
 
 ```mermaid
 graph TB
-    subgraph "用户层 (User Layer)"
-        U[用户终端 Terminal]
-        CMD[命令行输入 CLI Commands]
+    subgraph "User_Layer [用户层]"
+        U[Terminal 用户终端]
+        CMD[CLI Commands 命令行输入]
     end
 
-    subgraph "CLI 包 (packages/cli)"
-        subgraph "用户界面层"
-            APP[App.tsx - 主应用组件]
+    subgraph "CLI_Package [CLI包 packages/cli]"
+        subgraph "UI_Layer [用户界面层]"
+            APP[App.tsx 主应用组件]
             UI[UI Components]
-            THEME[主题管理 Theme Manager]
-            INPUT[输入处理 Input Handler]
+            THEME[Theme Manager 主题管理]
+            INPUT[Input Handler 输入处理]
         end
         
-        subgraph "配置管理"
-            CONFIG[配置加载 Config Loader]
-            SETTINGS[设置管理 Settings Manager]
-            AUTH_CLI[认证配置 Auth Config]
+        subgraph "Config_Management [配置管理]"
+            CONFIG[Config Loader 配置加载]
+            SETTINGS[Settings Manager 设置管理]
+            AUTH_CLI[Auth Config 认证配置]
         end
         
-        subgraph "启动与生命周期"
-            MAIN[主入口 main()]
+        subgraph "Lifecycle [启动与生命周期]"
+            MAIN[main 主入口]
             GEMINI_TSX[gemini.tsx]
-            LIFECYCLE[生命周期管理]
+            LIFECYCLE[Lifecycle Manager 生命周期管理]
         end
     end
 
-    subgraph "Core 包 (packages/core)"
-        subgraph "核心引擎"
+    subgraph "Core_Package [Core包 packages/core]"
+        subgraph "Core_Engine [核心引擎]"
             CLIENT[Gemini Client]
             CHAT[GeminiChat 会话管理]
-            CONTENT_GEN[内容生成器 ContentGenerator]
-            REQUEST[请求处理 GeminiRequest]
+            CONTENT_GEN[ContentGenerator 内容生成器]
+            REQUEST[GeminiRequest 请求处理]
         end
         
-        subgraph "工具系统 (Tools)"
-            TOOL_REG[工具注册中心 ToolRegistry]
+        subgraph "Tools_System [工具系统]"
+            TOOL_REG[ToolRegistry 工具注册中心]
             
-            subgraph "文件系统工具"
-                READ_FILE[读取文件 ReadFileTool]
-                WRITE_FILE[写入文件 WriteFileTool]
-                EDIT_TOOL[编辑工具 EditTool]
-                LS_TOOL[目录列表 LSTool]
-                GLOB_TOOL[文件匹配 GlobTool]
-            end
-            
-            subgraph "搜索与查询工具"
-                GREP_TOOL[文本搜索 GrepTool]
-                WEB_SEARCH[网络搜索 WebSearchTool]
-                WEB_FETCH[网页获取 WebFetchTool]
-            end
-            
-            subgraph "系统工具"
-                SHELL_TOOL[Shell命令 ShellTool]
-                MEMORY_TOOL[记忆工具 MemoryTool]
-            end
-            
-            subgraph "MCP 集成"
-                MCP_CLIENT[MCP客户端 MCPClient]
-                MCP_TOOL[MCP工具 MCPTool]
-            end
+            READ_FILE[ReadFileTool 读取文件]
+            WRITE_FILE[WriteFileTool 写入文件]
+            EDIT_TOOL[EditTool 编辑工具]
+            LS_TOOL[LSTool 目录列表]
+            GREP_TOOL[GrepTool 文本搜索]
+            WEB_SEARCH[WebSearchTool 网络搜索]
+            SHELL_TOOL[ShellTool Shell命令]
+            MEMORY_TOOL[MemoryTool 记忆工具]
+            MCP_CLIENT[MCPClient MCP客户端]
         end
         
-        subgraph "服务层"
-            FILE_DISCOVERY[文件发现服务]
-            GIT_SERVICE[Git 服务]
-            MEMORY_SERVICE[记忆服务]
+        subgraph "Services [服务层]"
+            FILE_DISCOVERY[File Discovery Service]
+            GIT_SERVICE[Git Service]
+            MEMORY_SERVICE[Memory Service]
         end
         
-        subgraph "提示词工程"
-            PROMPTS[系统提示词]
-            CONTEXT_MGR[上下文管理]
-            TURN_MGR[对话轮次管理]
-        end
-        
-        subgraph "认证与安全"
-            AUTH_CORE[认证核心]
-            OAUTH[OAuth2 处理]
-            API_KEY[API密钥管理]
-            VERTEX_AI[Vertex AI 集成]
+        subgraph "Auth_Security [认证与安全]"
+            AUTH_CORE[Auth Core 认证核心]
+            OAUTH[OAuth2 Handler]
+            API_KEY[API Key Manager]
+            VERTEX_AI[Vertex AI Integration]
         end
     end
 
-    subgraph "外部服务 (External Services)"
-        subgraph "Google AI Services"
-            GEMINI_API[Gemini API]
-            VERTEX_API[Vertex AI API]
-            SEARCH_API[Google Search API]
-        end
+    subgraph "External_Services [外部服务]"
+        GEMINI_API[Gemini API]
+        VERTEX_API[Vertex AI API]
+        SEARCH_API[Google Search API]
         
-        subgraph "MCP 服务器"
-            IMAGEN[Imagen MCP Server]
-            VEO[Veo MCP Server] 
-            LYRIA[Lyria MCP Server]
-            CUSTOM_MCP[自定义 MCP 服务器]
-        end
+        IMAGEN[Imagen MCP Server]
+        VEO[Veo MCP Server] 
+        CUSTOM_MCP[Custom MCP Server]
         
-        subgraph "系统资源"
-            FILE_SYS[文件系统]
-            SHELL[系统Shell]
-            GIT_REPO[Git 仓库]
-        end
+        FILE_SYS[File System 文件系统]
+        SHELL[System Shell]
+        GIT_REPO[Git Repository]
     end
 
-    subgraph "配置与数据"
-        ENV_CONFIG[环境配置 .env]
-        GEMINI_CONFIG[.gemini/ 配置目录]
-        MEMORY_FILES[记忆文件]
-        HISTORY[会话历史]
+    subgraph "Config_Data [配置与数据]"
+        ENV_CONFIG[Environment Config .env]
+        GEMINI_CONFIG[Gemini Config .gemini/]
+        MEMORY_FILES[Memory Files]
+        HISTORY[Session History]
     end
 
-    %% 用户交互流
+    %% User Interaction Flow
     U --> CMD
     CMD --> APP
     APP --> UI
     UI --> INPUT
     
-    %% CLI 到 Core 的通信
+    %% CLI to Core Communication
     APP --> CLIENT
     CONFIG --> AUTH_CORE
     SETTINGS --> AUTH_CORE
     
-    %% Core 内部流程
+    %% Core Internal Flow
     CLIENT --> CHAT
     CHAT --> CONTENT_GEN
     CONTENT_GEN --> REQUEST
     REQUEST --> GEMINI_API
     
-    %% 工具系统流程
+    %% Tools System Flow
     CHAT --> TOOL_REG
     TOOL_REG --> READ_FILE
     TOOL_REG --> WRITE_FILE
@@ -138,35 +111,34 @@ graph TB
     TOOL_REG --> WEB_SEARCH
     TOOL_REG --> MCP_CLIENT
     
-    %% MCP 集成
+    %% MCP Integration
     MCP_CLIENT --> IMAGEN
     MCP_CLIENT --> VEO
-    MCP_CLIENT --> LYRIA
     MCP_CLIENT --> CUSTOM_MCP
     
-    %% 外部服务交互
+    %% External Services
     WEB_SEARCH --> SEARCH_API
     AUTH_CORE --> VERTEX_API
     OAUTH --> GEMINI_API
     
-    %% 系统资源访问
+    %% System Resources
     READ_FILE --> FILE_SYS
     WRITE_FILE --> FILE_SYS
     SHELL_TOOL --> SHELL
     GIT_SERVICE --> GIT_REPO
     
-    %% 配置数据流
+    %% Configuration Data Flow
     ENV_CONFIG --> CONFIG
     GEMINI_CONFIG --> SETTINGS
     MEMORY_FILES --> MEMORY_SERVICE
     HISTORY --> CHAT
 
-    %% 样式定义
-    classDef userLayer fill:#e1f5fe
-    classDef cliLayer fill:#f3e5f5
-    classDef coreLayer fill:#e8f5e8
-    classDef externalLayer fill:#fff3e0
-    classDef configLayer fill:#fce4ec
+    %% Styling
+    classDef userLayer fill:#e1f5fe,stroke:#01579b
+    classDef cliLayer fill:#f3e5f5,stroke:#4a148c
+    classDef coreLayer fill:#e8f5e8,stroke:#1b5e20
+    classDef externalLayer fill:#fff3e0,stroke:#e65100
+    classDef configLayer fill:#fce4ec,stroke:#880e4f
     
     class U,CMD userLayer
     class APP,UI,CONFIG,SETTINGS,AUTH_CLI,MAIN cliLayer
