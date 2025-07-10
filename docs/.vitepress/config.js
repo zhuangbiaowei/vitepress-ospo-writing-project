@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   // Site metadata
   title: 'Professional Writing Hub',
   description: 'A professional markdown writing platform for technical documentation and articles',
@@ -53,7 +54,8 @@ export default defineConfig({
           text: '技术文章',
           items: [
             { text: '如何在企业内部建立OSPO', link: '/articles/ospo-guide' },
-            { text: '如何从开源社区招募人才', link: '/articles/recruiting-open-source-talent' }
+            { text: '如何从开源社区招募人才', link: '/articles/recruiting-open-source-talent' },
+            { text: 'Mermaid 图表指南', link: '/articles/mermaid-diagram-guide' }
           ]
         }
       ],
@@ -179,6 +181,12 @@ export default defineConfig({
     }
   },
 
+  // Mermaid configuration
+  mermaid: {
+    // Configuration options for Mermaid
+    theme: 'default'
+  },
+
   // Build configuration
   outDir: '../dist',
   assetsDir: 'assets',
@@ -188,4 +196,4 @@ export default defineConfig({
     port: 3000,
     host: true
   }
-})
+}))

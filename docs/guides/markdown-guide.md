@@ -208,6 +208,69 @@ const members = [
 <VPTeamMembers size="small" :members="members" />
 ```
 
+## 📊 Mermaid 图表
+
+VitePress 支持 Mermaid 图表，让您可以使用简单的文本语法创建复杂的图表。
+
+### 流程图
+
+````markdown
+```mermaid
+flowchart TD
+    A[开始] --> B{条件判断}
+    B -->|是| C[执行操作]
+    B -->|否| D[跳过操作]
+    C --> E[结束]
+    D --> E
+```
+````
+
+```mermaid
+flowchart TD
+    A[开始] --> B{条件判断}
+    B -->|是| C[执行操作]
+    B -->|否| D[跳过操作]
+    C --> E[结束]
+    D --> E
+```
+
+### 序列图
+
+````markdown
+```mermaid
+sequenceDiagram
+    participant A as 客户端
+    participant B as 服务器
+    A->>B: 发送请求
+    B-->>A: 返回响应
+```
+````
+
+```mermaid
+sequenceDiagram
+    participant A as 客户端
+    participant B as 服务器
+    A->>B: 发送请求
+    B-->>A: 返回响应
+```
+
+### 甘特图
+
+````markdown
+```mermaid
+gantt
+    title 项目计划
+    dateFormat YYYY-MM-DD
+    section 阶段1
+    任务1 :2024-01-01, 7d
+    任务2 :2024-01-08, 5d
+```
+````
+
+::: tip 更多图表类型
+查看 [Mermaid 图表指南](/articles/mermaid-diagram-guide) 了解更多图表类型和高级用法。
+:::
+
 ## ✨ 最佳实践
 
 ### 文档结构

@@ -12,6 +12,13 @@
 - [如何从开源社区招募人才？](/articles/recruiting-open-source-talent)  
   *全面探讨从开源社区识别、吸引和招募优秀技术人才的策略、方法和最佳实践。*
 
+### 可视化与图表
+
+- [Mermaid 图表指南](/articles/mermaid-diagram-guide)  
+  *详细介绍如何在 VitePress 中使用 Mermaid 创建各种类型的图表，包括流程图、序列图、甘特图等。*
+
+### 系统架构分析
+
 - [Gemini CLI 系统架构图](/articles/gemini-cli-system-architecture)
 
 - [Gemini CLI 组件交互 UML 图](/articles/gemini-cli-component-interaction-uml)
