@@ -31,6 +31,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@vuepress/plugin-links-check": "^2.0.0-rc.17",
     "gh-pages": "^6.3.0",
     "markdownlint": "^0.38.0",
     "markdownlint-cli": "^0.45.0",
