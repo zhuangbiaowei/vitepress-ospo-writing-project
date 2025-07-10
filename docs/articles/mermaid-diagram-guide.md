@@ -18,26 +18,26 @@ Mermaid 是一个基于 JavaScript 的图表生成工具，允许您使用简单
 
 ```mermaid
 flowchart TD
-    A[开始] --> B{是否有数据？}
-    B -->|是| C[处理数据]
-    B -->|否| D[获取数据]
-    C --> E[分析结果]
+    A[Start] --> B{Has Data?}
+    B -->|Yes| C[Process Data]
+    B -->|No| D[Get Data]
+    C --> E[Analyze Result]
     D --> C
-    E --> F[结束]
+    E --> F[End]
 ```
 
 ### 序列图（Sequence Diagram）
 
 ```mermaid
 sequenceDiagram
-    participant 用户
-    participant 系统
-    participant 数据库
+    participant User
+    participant System
+    participant Database
     
-    用户->>系统: 登录请求
-    系统->>数据库: 验证用户
-    数据库-->>系统: 返回结果
-    系统-->>用户: 登录成功/失败
+    User->>System: Login Request
+    System->>Database: Validate User
+    Database-->>System: Return Result
+    System-->>User: Login Success/Failure
 ```
 
 ### 类图（Class Diagram）
@@ -63,106 +63,41 @@ classDiagram
 
 ```mermaid
 stateDiagram-v2
-    [*] --> 未登录
-    未登录 --> 已登录: 输入凭证
-    已登录 --> 未登录: 注销
-    已登录 --> 操作中: 执行操作
-    操作中 --> 已登录: 操作完成
-    操作中 --> 错误: 操作失败
-    错误 --> 已登录: 重试
+    [*] --> NotLoggedIn
+    NotLoggedIn --> LoggedIn: Enter Credentials
+    LoggedIn --> NotLoggedIn: Logout
+    LoggedIn --> Processing: Execute Action
+    Processing --> LoggedIn: Action Complete
+    Processing --> Error: Action Failed
+    Error --> LoggedIn: Retry
 ```
 
 ### 甘特图（Gantt Chart）
 
 ```mermaid
 gantt
-    title 项目开发计划
-    dateFormat  YYYY-MM-DD
-    section 设计阶段
-    需求分析           :2024-01-01, 7d
-    UI设计            :2024-01-08, 5d
-    section 开发阶段
-    前端开发          :2024-01-15, 14d
-    后端开发          :2024-01-15, 21d
-    section 测试阶段
-    单元测试          :2024-02-05, 7d
-    集成测试          :2024-02-12, 5d
+    title Project Development Plan
+    dateFormat YYYY-MM-DD
+    section Design Phase
+    Requirements Analysis    :2024-01-01, 7d
+    UI Design               :2024-01-08, 5d
+    section Development Phase
+    Frontend Development    :2024-01-15, 14d
+    Backend Development     :2024-01-15, 21d
+    section Testing Phase
+    Unit Testing           :2024-02-05, 7d
+    Integration Testing    :2024-02-12, 5d
 ```
 
 ### 饼图（Pie Chart）
 
 ```mermaid
-pie title 技术栈使用情况
+pie title Tech Stack Usage
     "JavaScript" : 45
     "Python" : 25
     "Java" : 15
     "Go" : 10
-    "其他" : 5
-```
-
-### GitGraph
-
-```mermaid
-gitgraph
-    commit
-    branch develop
-    checkout develop
-    commit
-    commit
-    checkout main
-    merge develop
-    commit
-    branch feature
-    checkout feature
-    commit
-    commit
-    checkout develop
-    merge feature
-    checkout main
-    merge develop
-```
-
-### ER图（Entity Relationship Diagram）
-
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-    
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-```
-
-### 用户旅程图（User Journey）
-
-```mermaid
-journey
-    title 用户购物体验
-    section 发现产品
-      浏览网站: 5: 用户
-      搜索产品: 3: 用户
-      查看详情: 4: 用户
-    section 购买过程
-      添加到购物车: 2: 用户
-      结算: 1: 用户
-      支付: 1: 用户
-    section 售后服务
-      收到商品: 5: 用户
-      使用产品: 5: 用户
-      客服支持: 3: 用户
+    "Others" : 5
 ```
 
 ## 高级功能
@@ -171,46 +106,33 @@ journey
 
 ```mermaid
 flowchart TB
-    subgraph "前端"
-        A[React应用]
-        B[状态管理]
-        C[路由系统]
+    subgraph "Frontend"
+        A[React App]
+        B[State Management]
+        C[Router]
     end
     
-    subgraph "后端"
-        D[API服务]
-        E[业务逻辑]
-        F[数据访问层]
-    end
-    
-    subgraph "数据库"
-        G[MySQL]
-        H[Redis缓存]
+    subgraph "Backend"
+        D[API Service]
+        E[Business Logic]
+        F[Data Access]
     end
     
     A --> D
     D --> E
-    E --> F
-    F --> G
-    D --> H
 ```
 
 ### 样式定制
 
 ```mermaid
 flowchart LR
-    id1["正常节点"]
-    id2["强调节点"]
-    id3["警告节点"]
+    id1["Normal Node"]
+    id2["Emphasized Node"]
     
     id1 --> id2
-    id2 --> id3
     
     classDef emphasized fill:#f9f,stroke:#333,stroke-width:4px
-    classDef warning fill:#ff9999,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
-    
     class id2 emphasized
-    class id3 warning
 ```
 
 ## 最佳实践

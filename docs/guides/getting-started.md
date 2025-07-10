@@ -140,9 +140,9 @@ export default {
 
 ```mermaid
 flowchart LR
-    A[写作] --> B[预览]
-    B --> C[发布]
-    C --> D[分享]
+    A[Write] --> B[Preview]
+    B --> C[Publish]
+    C --> D[Share]
 ```
 
 了解更多图表类型，请查看 [Mermaid 图表指南](/articles/mermaid-diagram-guide)。

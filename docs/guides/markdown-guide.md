@@ -217,20 +217,20 @@ VitePress 支持 Mermaid 图表，让您可以使用简单的文本语法创建�
 ````markdown
 ```mermaid
 flowchart TD
-    A[开始] --> B{条件判断}
-    B -->|是| C[执行操作]
-    B -->|否| D[跳过操作]
-    C --> E[结束]
+    A[Start] --> B{Condition}
+    B -->|Yes| C[Execute]
+    B -->|No| D[Skip]
+    C --> E[End]
     D --> E
 ```
 ````
 
 ```mermaid
 flowchart TD
-    A[开始] --> B{条件判断}
-    B -->|是| C[执行操作]
-    B -->|否| D[跳过操作]
-    C --> E[结束]
+    A[Start] --> B{Condition}
+    B -->|Yes| C[Execute]
+    B -->|No| D[Skip]
+    C --> E[End]
     D --> E
 ```
 
@@ -239,19 +239,19 @@ flowchart TD
 ````markdown
 ```mermaid
 sequenceDiagram
-    participant A as 客户端
-    participant B as 服务器
-    A->>B: 发送请求
-    B-->>A: 返回响应
+    participant A as Client
+    participant B as Server
+    A->>B: Send Request
+    B-->>A: Return Response
 ```
 ````
 
 ```mermaid
 sequenceDiagram
-    participant A as 客户端
-    participant B as 服务器
-    A->>B: 发送请求
-    B-->>A: 返回响应
+    participant A as Client
+    participant B as Server
+    A->>B: Send Request
+    B-->>A: Return Response
 ```
 
 ### 甘特图
@@ -259,11 +259,11 @@ sequenceDiagram
 ````markdown
 ```mermaid
 gantt
-    title 项目计划
+    title Project Plan
     dateFormat YYYY-MM-DD
-    section 阶段1
-    任务1 :2024-01-01, 7d
-    任务2 :2024-01-08, 5d
+    section Phase 1
+    Task 1 :2024-01-01, 7d
+    Task 2 :2024-01-08, 5d
 ```
 ````
 

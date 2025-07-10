@@ -184,7 +184,12 @@ export default withMermaid(defineConfig({
   // Mermaid configuration
   mermaid: {
     // Configuration options for Mermaid
-    theme: 'default'
+    theme: 'default',
+    startOnLoad: true,
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true
+    }
   },
 
   // Build configuration
