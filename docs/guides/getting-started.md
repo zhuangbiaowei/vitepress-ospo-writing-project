@@ -22,7 +22,7 @@ npm install
 npm run dev
 ```
 
-开发服务器启动后，访问 `http://localhost:3000` 即可预览您的内容。
+开发服务器启动后，访问 `http://localhost:5173` 即可预览您的内容。
 
 ## 📝 创建文章
 

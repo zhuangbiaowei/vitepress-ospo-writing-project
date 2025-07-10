@@ -72,7 +72,7 @@ sidebar: {
 npm run dev
 ```
 
-访问 http://localhost:3000/articles/ 检查文章列表和侧边栏是否正确显示新文章。
+访问 /articles/ 检查文章列表和侧边栏是否正确显示新文章。
 
 ### 5. 构建并部署
 

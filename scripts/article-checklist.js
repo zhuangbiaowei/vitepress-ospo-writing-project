@@ -123,5 +123,5 @@ if (results.fileExists && results.inIndex && results.inSidebar) {
 if (results.fileExists) {
   console.log(`\n${colors.blue}提示:${colors.reset} 运行以下命令查看效果:`);
   console.log(`  npm run dev`);
-  console.log(`  然后访问: http://localhost:3000/articles/${articleId}`);
+  console.log(`  然后访问: /articles/${articleId}`);
 }
