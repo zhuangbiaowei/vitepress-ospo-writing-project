@@ -15,6 +15,7 @@
     "lint:markdown": "markdownlint 'docs/**/*.md' --ignore 'docs/.vitepress'",
     "check-links": "vitepress-links-check docs",
     "new:article": "node scripts/new-article.js",
+    "check:article": "node scripts/article-checklist.js",
     "predeploy": "npm run build:clean",
     "deploy": "gh-pages -d dist",
     "test:deploy": "node scripts/test-deploy.js"

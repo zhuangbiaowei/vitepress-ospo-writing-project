@@ -110,8 +110,16 @@ const main = () => {
     console.log('');
     console.log('下一步:');
     console.log('1. 编辑文章内容');
-    console.log(`2. 将文章链接添加到目录 (编辑 docs/.vitepress/config.js)`);
-    console.log('3. 运行 npm run dev 预览文章');
+    console.log('2. 将文章链接添加到文章列表 (编辑 docs/articles/index.md)');
+    console.log('3. 将文章添加到侧边栏 (编辑 docs/.vitepress/config.js)');
+    console.log('4. 运行 npm run dev 预览文章');
+    console.log('');
+    
+    // 提醒用户不要忘记更新侧边栏和索引
+    console.log('⚠️ 重要提示:');
+    console.log('请务必完成步骤2和步骤3，否则文章将不会出现在网站导航中！');
+    console.log('您可以运行以下命令检查文章配置是否完整:');
+    console.log(`node scripts/article-checklist.js ${filename.replace('.md', '')}`);
     console.log('');
 
     rl.close();

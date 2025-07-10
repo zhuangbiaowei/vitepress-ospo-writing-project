@@ -52,7 +52,8 @@ export default defineConfig({
         {
           text: '技术文章',
           items: [
-            { text: '如何在企业内部建立OSPO', link: '/articles/ospo-guide' }
+            { text: '如何在企业内部建立OSPO', link: '/articles/ospo-guide' },
+            { text: '如何从开源社区招募人才', link: '/articles/recruiting-open-source-talent' }
           ]
         }
       ],
