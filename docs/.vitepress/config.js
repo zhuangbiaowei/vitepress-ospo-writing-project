@@ -51,11 +51,26 @@ export default withMermaid(defineConfig({
     sidebar: {
       '/articles/': [
         {
-          text: '技术文章',
+          text: '开源管理',
           items: [
             { text: '如何在企业内部建立OSPO', link: '/articles/ospo-guide' },
-            { text: '如何从开源社区招募人才', link: '/articles/recruiting-open-source-talent' },
+            { text: '如何从开源社区招募人才', link: '/articles/recruiting-open-source-talent' }
+          ]
+        },
+        {
+          text: '可视化与图表',
+          items: [
             { text: 'Mermaid 图表指南', link: '/articles/mermaid-diagram-guide' }
+          ]
+        },
+        {
+          text: 'Gemini CLI 系统架构分析',
+          items: [
+            { text: 'Gemini CLI 深度分析报告', link: '/articles/gemini-cli-comprehensive-analysis-report' },
+            { text: 'Gemini CLI 系统架构图', link: '/articles/gemini-cli-system-architecture' },
+            { text: 'Gemini CLI 组件交互 UML 图', link: '/articles/gemini-cli-component-interaction-uml' },
+            { text: 'Gemini CLI 用户交互时序图', link: '/articles/gemini-cli-user-interaction-sequence' },
+            { text: 'Gemini CLI 数据流程图', link: '/articles/gemini-cli-data-flow-diagram' }
           ]
         }
       ],

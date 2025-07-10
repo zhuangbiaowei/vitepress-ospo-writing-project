@@ -27,7 +27,7 @@
 
 - [Gemini CLI 数据流程图](/articles/gemini-cli-data-flow-diagram)
 
-- [Gemini CLI 深度分析报告](/articles/gemini-cli-comprehensive-analysis-report.md)
+- [Gemini CLI 深度分析报告](/articles/gemini-cli-comprehensive-analysis-report)
   *本分析报告基于项目源代码深度解析，提供了全面的技术架构和实现细节分析，为理解现代AI工具设计提供了详实的参考资料。*
 
 ## 🎯 文章分类
