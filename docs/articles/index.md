@@ -12,7 +12,16 @@
 - [如何从开源社区招募人才？](/articles/recruiting-open-source-talent)  
   *全面探讨从开源社区识别、吸引和招募优秀技术人才的策略、方法和最佳实践。*
 
-- [Gemini CLI 系统架构图](/articles/gemini-cli-system-architecture.md)
+- [Gemini CLI 系统架构图](/articles/gemini-cli-system-architecture)
+
+- [Gemini CLI 组件交互 UML 图](/articles/gemini-cli-component-interaction-uml)
+
+- [Gemini CLI 用户交互时序图](/articles/gemini-cli-user-interaction-sequence)
+
+- [Gemini CLI 数据流程图](/articles/gemini-cli-data-flow-diagram)
+
+- [Gemini CLI 深度分析报告](/articles/gemini-cli-comprehensive-analysis-report.md)
+  *本分析报告基于项目源代码深度解析，提供了全面的技术架构和实现细节分析，为理解现代AI工具设计提供了详实的参考资料。*
 
 ## 🎯 文章分类
 
