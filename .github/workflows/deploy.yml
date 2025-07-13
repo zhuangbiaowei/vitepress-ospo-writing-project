@@ -1,0 +1,74 @@
+name: Deploy VitePress
+
+# 触发条件：在 main 分支推送或合并PR时
+on:
+  push:
+    branches: [main]
+  # 允许从 Actions 选项卡手动触发工作流
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许一个并发部署工作流，跳过排队中的运行
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build VitePress Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          # 启用缓存（如果锁文件不存在会自动跳过）
+          cache: 'npm'
+
+      # 设置 Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # 安装依赖项 - 优先使用 npm ci，如果失败则回退到 npm install
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            echo "Found package-lock.json, using npm ci"
+            npm ci
+          else
+            echo "No package-lock.json found, using npm install"
+            npm install
+          fi
+
+      # 构建站点
+      - name: Build VitePress site
+        run: npm run build
+
+      # 上传构建产物
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
